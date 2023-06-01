@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   inputRoot: {
     color: "inherit",
+    paddingLeft: theme.spacing(6),
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
