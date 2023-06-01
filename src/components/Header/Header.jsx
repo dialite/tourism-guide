@@ -3,7 +3,10 @@ import { Autocomplete } from "@react-google-maps/api";
 import { Box, InputBase, Toolbar, Typography, AppBar } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
+import useStyles from "./styles";
+
 const Header = () => {
+  const classes = useStyles();
   return (
     <AppBar position="static">
       <Toolbar className={classes.toolbar}>
