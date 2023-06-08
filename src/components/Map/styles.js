@@ -1,6 +1,6 @@
 import { makeStyles } from "@mui/styles";
 
-export default makeStyles(() => ({
+const useStyles = makeStyles(() => ({
   paper: {
     padding: "10px",
     display: "flex",
@@ -22,3 +22,5 @@ export default makeStyles(() => ({
     cursor: "pointer",
   },
 }));
+
+export default useStyles;
