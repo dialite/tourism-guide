@@ -25,6 +25,7 @@ const Header = () => {
             <InputBase
               placeholder="Search..."
               classes={{ root: classes.inputRoot, input: classes.inputInput }}
+              color="white"
             />
           </div>
           {/* </Autocomplete> */}

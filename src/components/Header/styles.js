@@ -31,8 +31,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   inputRoot: {
-    color: "inherit",
+    color: theme.palette.common.white,
     paddingLeft: theme.spacing(6),
+    "& .MuiInputBase-input": {
+      color: theme.palette.common.white, // Set the color to white
+    },
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
