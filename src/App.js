@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { CssBaseline, Grid } from "@mui/material";
 
+import { getLocationData } from "./api";
 import Header from "./components/Header/Header";
 import ListItems from "./components/ListItems/ListItems";
 import Map from "./components/Map/Map";
 
 const App = () => {
+  const [location, setLocation] = useState("");
+
+  useEffect(() => {
+    getLocationData().then((data) => {
+      console.log(data);
+      setLocation(data);
+    });
+  }, []);
+
   return (
     <>
       <CssBaseline />
