@@ -7,7 +7,10 @@ import ListItems from "./components/ListItems/ListItems";
 import Map from "./components/Map/Map";
 
 const App = () => {
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState({});
+
+  const [coordinates, setCoordinates] = useState({});
+  const [bounds, setBounds] = useState(null);
 
   useEffect(() => {
     getLocationData().then((data) => {
@@ -25,7 +28,11 @@ const App = () => {
           <ListItems />
         </Grid>
         <Grid item xs={12} md={8}>
-          <Map />
+          <Map
+            setCoordinates={setCoordinates}
+            setBounds={setBounds}
+            coordinates={coordinates}
+          />
         </Grid>
       </Grid>
     </>
